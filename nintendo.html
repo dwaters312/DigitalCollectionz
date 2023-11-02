@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Collectionz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="collection.html">Home</a></li>
+            <li><a href="playstation.html">PlayStation</a></li>
+            <li><a href="xbox.html">Xbox</a></li>
+            <li><a href="Nintendo.html">Nintendo</a></li>
+            <li><a href="personalComputer.html">PC</a></li>
+        </ul>
+    </nav>
+    <main>
+        <body>
+            <header>
+                <h1>Nintendo Collection</h1>
+            </header>
+
+            <h2>Nintendo Entertainment System(NES)</h2>
+            <div class="game-container">
+                <img src="images/zelda.jpg" alt="Zelda Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">The Legend of Zelda</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/metroid.jpg" alt="Metroid Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Metroid</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/tetris.jpg" alt="Testris Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Tetris</a>
+                </div>
+            </div>
+            
+            <h2>Super Ninetendo Entertainment System(SNES)</h2>
+            <div class="game-container">
+                <img src="images/megaman.jpg" alt="Mega Man X Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Mega Man X</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/dkcountry.jpg" alt="Donkey Kong Country Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Donkey Kong Country</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/marioworld.jpg" alt="Super Mario World Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Super Mario World</a>
+                </div>
+            </div>
+          
+            <h2>Nintendo 64</h2>
+            <div class="game-container">
+                <img src="images/goldeneye.jpg" alt="GoldenEye 007 Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">GoldenEye 007</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/banjokazooie.jpg" alt="Banjo-Kazooie Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Banjo-Kazooie</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/mariokart64.jpg" alt="Mario Kart 64 Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Mario Kart 64</a>
+                </div>
+            </div>
+            
+            <h2>Game Boy Advance</h2>
+            <div class="game-container">
+                <img src="images/pokemonemerald.jpg" alt="Pokemon Emerald Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Pokemon Emerald</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/sonicadvance.jpg" alt="Sonic Advance Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Sonic Advance</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/THPS2.jpg" alt="Tony Hawk's Pro Skater 2 Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Tony Hawk's Pro Skater 2</a>
+                </div>
+            </div>
+
+            <h2>Nintendo Switch</h2>
+            <div class="game-container">
+                <img src="images/BOTW.jpg" alt="The Legend of Zelda: Breath of the Wild Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">The Legend of Zelda: Breath of the Wild</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/splatoon3.jpg" alt="Splatoon 3 Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Splatoon 3</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/switchsports.jpg" alt="intendo Switch Sports Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Nintendo Switch Sports</a>
+                </div>
+            </div>
+            <script>
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(headerHTML => {
+                        const headerContainer = document.createElement('div');
+                        headerContainer.innerHTML = headerHTML;
+                        document.body.insertBefore(headerContainer, document.body.firstChild);
+                    })
+                    .catch(error => console.error('Failed to fetch header: ', error));
+            </script>
+        </body>
+    </main>
+    <footer>
+        <p>&copy; 2023 DigitalCollectionz</p>
+    </footer>
+
+</body>
+</html>

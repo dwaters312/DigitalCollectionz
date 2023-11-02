@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Game</title>
+</head>
+<body>
+    <h1>New Entry</h1>
+    <form id="add-game-form">
+        <h2>Add a New Game</h2>
+    
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Game Title" required>
+   
+        <label for="console-type">Console:</label>
+        <input type="text" id="console-type" name="console-type" placeholder="Xbox, PC, Nintendo, etc." required>
+
+        <label for="photo">Upload a Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>    
+
+        <button type="submit">Add Game</button>
+    </form>
+
+    <button onclick="redirectToNewPage()">Back</button>
+
+    <script>
+        function redirectToNewPage() {
+            window.location.href = 'collection.html';
+        }
+    </script>
+</body>
+</html>

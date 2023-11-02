@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Collectionz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="collection.html">Home</a></li>
+            <li><a href="playstation.html">PlayStation</a></li>
+            <li><a href="xbox.html">Xbox</a></li>
+            <li><a href="Nintendo.html">Nintendo</a></li>
+            <li><a href="personalComputer.html">PC</a></li>
+        </ul>
+    </nav>
+    <main>
+        <body>
+        <header>
+            <h1>Xbox Collection</h1>
+        </header>
+
+        <h2>Xbox</h2>
+        <div class="game-container">
+            <img src="images/fable.jpg" alt="Fable Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Fable</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/battlefront.jpg" alt="Star Wars: Battlefront II Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Star Wars: Battlefront II</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/chaostheory.jpg" alt="Tom Clancy's Splinter Cell: Chaos Theory Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Tom Clancy's Splinter Cell: Chaos Theory</a>
+            </div>
+        </div>
+        
+        <h2>Xbox 360</h2>
+        <div class="game-container">
+            <img src="images/gearsofwar3.jpg" alt="Gears of War 3 Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Gears of War 3</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/cod4.jpg" alt="Call of Duty 4: Modern Warfare Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Call of Duty 4: Modern Warfare</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/fallout3.jpg" alt="Fallout 3 Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Fallout 3</a>
+            </div>
+        </div>
+      
+        <h2>Xbox One</h2>
+        <div class="game-container">
+            <img src="images/destiny2.jpg" alt="Destiny 2 Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Destiny 2</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/fallenorder.jpg" alt="Star Wars Jedi: Fallen Order Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Star Wars Jedi: Fallen Order</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/halomcc.jpg" alt="Halo: The Master Chief Collection Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Halo: The Master Chief Collection</a>
+            </div>
+        </div>
+        
+        <h2>Xbox Series X/S</h2>
+        <div class="game-container">
+            <img src="images/haloinfinite.jpg" alt="Halo Infinite Image" class="game-image">
+            <div class="game-title">
+                <a href="#">Halo Infinite</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/ittakestwo.jpg" alt="It Takes Two Image" class="game-image">
+            <div class="game-title">
+                <a href="#">It Takes Two</a>
+            </div>
+        </div>
+        <div class="game-container">
+            <img src="images/highonlife.jpg" alt="High on Life Image" class="game-image">
+            <div class="game-title">
+                <a href="#">High on Life</a>
+            </div>
+        </div>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(headerHTML => {
+                    const headerContainer = document.createElement('div');
+                    headerContainer.innerHTML = headerHTML;
+                    document.body.insertBefore(headerContainer, document.body.firstChild);
+                })
+                .catch(error => console.error('Failed to fetch header: ', error));
+        </script>
+        </body>
+    </main>
+    <footer>
+        <p>&copy; 2023 DigitalCollectionz</p>
+    </footer>
+
+</body>
+</html>

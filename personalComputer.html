@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Collectionz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="collection.html">Home</a></li>
+            <li><a href="playstation.html">PlayStation</a></li>
+            <li><a href="xbox.html">Xbox</a></li>
+            <li><a href="Nintendo.html">Nintendo</a></li>
+            <li><a href="personalComputer.html">PC</a></li>
+        </ul>
+    </nav>
+    <main>
+        <body>
+            <header>
+                <h1>PC Collection</h1>
+            </header>
+
+            <div class="game-container">
+                <img src="images/raft.jpg" alt="Raft Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Raft</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/readyornot.jpg" alt="Ready or Not Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Ready or Not</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/golfit.jpg" alt="Golf It! Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Golf It!</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/CS2.jpg" alt="Counter-Strike 2 Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Counter-Strike 2</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/bloodandbacon.jpg" alt="Blood and Bacon Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Blood and Bacon</a>
+                </div>
+            </div>
+            <div class="game-container">
+                <img src="images/friends.jpg" alt="Friends vs Friends Image" class="game-image">
+                <div class="game-title">
+                    <a href="#">Friends vs Friends</a>
+                </div>
+            </div>
+            <script>
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(headerHTML => {
+                        const headerContainer = document.createElement('div');
+                        headerContainer.innerHTML = headerHTML;
+                        document.body.insertBefore(headerContainer, document.body.firstChild);
+                    })
+                    .catch(error => console.error('Failed to fetch header: ', error));
+            </script>
+        </body>
+    </main>
+    <footer>
+        <p>&copy; 2023 DigitalCollectionz</p>
+    </footer>
+
+</body>
+</html>

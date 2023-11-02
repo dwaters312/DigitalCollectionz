@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Collectionz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="collection.html">Home</a></li>
+            <li><a href="playstation.html">PlayStation</a></li>
+            <li><a href="xbox.html">Xbox</a></li>
+            <li><a href="Nintendo.html">Nintendo</a></li>
+            <li><a href="personalComputer.html">PC</a></li>
+        </ul>
+    </nav>
+    <main>
+        <body>
+            <header>
+                <h1>PlayStation Collection</h1>
+            </header>
+        
+            <main>
+                <h2>PlayStation 1</h2>
+                <div class="game-container">
+                    <img src="images/crash.jpg" alt="Crash Bandicoot Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Crash Bandicoot</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/silenthill.jpg" alt="Silent Hill Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Silent Hill</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/tombraider.jpg" alt="Tomb Raider Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Tomb Raider</a>
+                    </div>
+                </div>
+                
+                <h2>PlayStation 2</h2>
+                <div class="game-container">
+                    <img src="images/gtasa.jpg" alt="Grand Theft Auto: San Andreas Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Grand Theft Auto: San Andreas</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/defjam.jpg" alt="Def Jam: Fight for NY Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Def Jam: Fight for NY</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/mostwanted.jpg" alt="Need for Speed: Most Wanted Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Need for Speed: Most Wanted</a>
+                    </div>
+                </div>
+              
+                <h2>PlayStation 3</h2>
+                <div class="game-container">
+                    <img src="images/tlou.jpg" alt="The Last of Us Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">The Last of Us</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/bo2.jpg" alt="Call of Duty: Black Ops II Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Call of Duty: Black Ops II</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/skate3.jpg" alt="Skate 3 Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Skate 3</a>
+                    </div>
+                </div>
+                
+                <h2>PlayStation 4</h2>
+                <div class="game-container">
+                    <img src="images/eldenring.jpg" alt="Elden Ring Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Elden Ring</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/godofwar.jpg" alt="God of War Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">God of War</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/horizon.jpg" alt="Horizon Zero Dawn Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Horizon Zero Dawn</a>
+                    </div>
+                </div>
+
+                <h2>PlayStation 5</h2>
+                <div class="game-container">
+                    <img src="images/spiderman2.jpg" alt="Spider-Man 2 Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Spider-Man 2</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/stray.jpg" alt="Stray Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Stray</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/riftapart.jpg" alt="Ratchet & Clank: Rift Apart Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Ratchet & Clank: Rift Apart</a>
+                    </div>
+                </div>
+            </main>
+            <script>
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(headerHTML => {
+                        const headerContainer = document.createElement('div');
+                        headerContainer.innerHTML = headerHTML;
+                        document.body.insertBefore(headerContainer, document.body.firstChild);
+                    })
+                    .catch(error => console.error('Failed to fetch header: ', error));
+            </script>
+        </body>
+    </main>
+    <footer>
+        <p>&copy; 2023 DigitalCollectionz</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Collectionz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="collection.html">Home</a></li>
+            <li><a href="playstation.html">PlayStation</a></li>
+            <li><a href="xbox.html">Xbox</a></li>
+            <li><a href="Nintendo.html">Nintendo</a></li>
+            <li><a href="personalComputer.html">PC</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Recently Added Games</h2>
+        <button onclick="redirectToNewPage()">+ Add</button>
+
+                <div class="game-container">
+                    <img src="images/spiderman2.jpg" alt="Spider-Man 2 Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Spider-Man 2</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/highonlife.jpg" alt="High on Life Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">High on Life</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/splatoon3.jpg" alt="Splatoon 3 Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Splatoon 3</a>
+                    </div>
+                </div>
+                <div class="game-container">
+                    <img src="images/CS2.jpg" alt="Counter-Strike 2 Image" class="game-image">
+                    <div class="game-title">
+                        <a href="#">Counter-Strike 2</a>
+                    </div>
+                </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 DigitalCollectionz</p>
+    </footer>
+
+    <script>
+        const accountDropdown = document.querySelector(".account-dropdown");
+        const dropdownContent = document.querySelector(".dropdown-content");
+
+        accountDropdown.addEventListener("mouseover", () => {
+            const rect = accountDropdown.getBoundingClientRect();
+            const dropdownRect = dropdownContent.getBoundingClientRect();
+
+            if (rect.left + dropdownRect.width > window.innerWidth) {
+                dropdownContent.style.right = "0";
+                dropdownContent.style.left = "auto";
+            } else {
+                dropdownContent.style.left = "0";
+                dropdownContent.style.right = "auto";
+            }
+        });
+    </script>
+     <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(headerHTML => {
+                const headerContainer = document.createElement('div');
+                headerContainer.innerHTML = headerHTML;
+                document.body.insertBefore(headerContainer, document.body.firstChild);
+            })
+            .catch(error => console.error('Failed to fetch header: ', error));
+    </script>
+    <script>
+        function redirectToNewPage() {
+            window.location.href = 'addgame.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <script>
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return re.test(password);
+        }
+
+        function submitForm() {
+            if (validatePassword()) {
+                alert("Form submitted successfully!");
+            } else {
+                alert("Password does not meet complexity requirements.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <button type="button" onclick="submitForm()">Register</button>
+    </form>
+</body>
+</html>
